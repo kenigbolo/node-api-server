@@ -16,14 +16,13 @@ describe('/GET currency rate', () => {
           .get('/latest?base=USD')
           .end((err, res) => {
               res.should.have.status(200);
-              // res.should.be.json;
             done();
           });
     });
 });
 
 describe('/GET currency rate', () => {
-    it('it should respond with a json', (done) => {
+    it('it should respond with a json for valid params', (done) => {
       chai.request(server)
           .get('/latest?base=USD')
           .end((err, res) => {
@@ -34,9 +33,9 @@ describe('/GET currency rate', () => {
 });
 
 describe('/GET invalid parameters', () => {
-    it('it should respond with a json', (done) => {
+    it('it should respond with a json file object', (done) => {
       chai.request(server)
-          .get('/latest?base=USD')
+          .get('/rttyfty67')
           .end((err, res) => {
               res.should.be.json;
             done();
