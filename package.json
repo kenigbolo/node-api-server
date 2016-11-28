@@ -1,5 +1,5 @@
 {
-  "name": "node-api",
+  "name": "node-fixer-io-api",
   "version": "1.0.0",
   "description": "node-api to connect to flixer.io",
   "main": "app.js",
@@ -17,7 +17,7 @@
     "url": "git+https://github.com/kenigbolo/node-api-server.git"
   },
   "author": "Kenigbolo Meya Stephen",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kenigbolo/node-api-server/issues"
   },
