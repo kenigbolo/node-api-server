@@ -1,6 +1,6 @@
 # DEVELOPERS GUIDE
 
-[![Build Status](https://travis-ci.org/kenigbolo/currency-converter.png)](https://travis-ci.org/kenigbolo/currency-converter)
+[![Build Status](https://travis-ci.org/kenigbolo/node-api-server.png)](https://travis-ci.org/kenigbolo/node-api-server)
 
 ##Getting Started
 
