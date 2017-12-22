@@ -1,9 +1,10 @@
-var http = require('http')
+var http = require('http');
+var url = require('url');
 var server = http.createServer();
 
 server.on('request', function(request, response){
   response.writeHead(200, {'Content-Type': 'application/json'});
-  var query = require('url').parse(request.url, true).path;
+  var query = url.parse(request.url, true).path;
   http.get('http://api.fixer.io' + query, function(res){
     var buffer = "";
     res.on('data', function(chunk) {
