@@ -21,8 +21,7 @@ This package has been published on [NPM](https://www.npmjs.com/package/node-fixe
 ## NPM Package Usage
 The npm package exposes a tiny utility class as well as a tiny node server. The utility class can be used to leverage making requests to the the fixer.io api. This utility will be extracted from here and made into it's own tiny package in the future. example usage of this is as follows:
 
-```
-Javascript
+```javascript
 
 const FixerIO = require('node-fixer-io').FixerIO;
 const fixerUtility = new FixerIO('put-your-api-key-here');
