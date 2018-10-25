@@ -1,7 +1,7 @@
 {
   "name": "node-fixer-io-api",
   "version": "1.1.1",
-  "description": "node-api to connect to flixer.io",
+  "description": "node-api to connect to fixer.io",
   "main": "app.js",
   "engines": {
     "node": "6.9.1"
