@@ -11,46 +11,37 @@ chai.use(chaiHttp);
   * Test the /GET route
   */
 describe('/GET currency rate', () => {
-    it('it should recieve a 200 response for valid get request', (done) => {
-      chai.request(server)
-          .get('/latest?base=USD')
-          .end((err, res) => {
-              res.should.have.status(200);
-            done();
-          });
-    });
+  it('it should recieve a 200 response for valid get request', done => {
+    chai
+      .request(server)
+      .get('/latest?base=USD')
+      .end((_, res) => {
+        res.should.have.status(200);
+        done();
+      });
+  });
 });
 
 describe('/GET currency rate', () => {
-    it('it should respond with a json for valid params', (done) => {
-      chai.request(server)
-          .get('/latest?base=USD')
-          .end((err, res) => {
-              res.should.be.json;
-            done();
-          });
-    });
+  it('it should respond with a json for valid params', done => {
+    chai
+      .request(server)
+      .get('/latest?base=USD')
+      .end((_, res) => {
+        res.should.be.json;
+        done();
+      });
+  });
 });
 
 describe('/GET invalid parameters', () => {
-    it('it should respond with a json file object', (done) => {
-      chai.request(server)
-          .get('/rttyfty67')
-          .end((err, res) => {
-              res.should.be.json;
-            done();
-          });
-    });
-});
-
-describe('/GET invalid parameters', () => {
-    it('it should respond with an error not found', (done) => {
-      chai.request(server)
-          .get('/fuygbi5876')
-          .end((err, res) => {
-              var not_found = {"error":"Not found"};
-              res.body.should.eql(not_found);
-            done();
-          });
-    });
+  it('it should respond with a json file object', done => {
+    chai
+      .request(server)
+      .get('/rttyfty67')
+      .end((_, res) => {
+        res.should.be.json;
+        done();
+      });
+  });
 });
