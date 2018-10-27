@@ -1,6 +1,6 @@
 const http = require('http');
 const url = require('url');
-const FixerIO = require('./index');
+const FixerIO = require('fixer-io-utility');
 const server = http.createServer();
 
 /**
